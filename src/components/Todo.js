@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addTodo: (obj) => dispatch(addTodos(obj)),
+
   };
 };
 
@@ -51,6 +52,7 @@ const Todos = (props) => {
         className="add-btn"
         onClick={() => add()}
       >
+        <GoPlus/>
        Add
       </motion.button>
       <br />

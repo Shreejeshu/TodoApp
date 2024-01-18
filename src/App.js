@@ -4,6 +4,7 @@ import DisplayTodos from './components/DisplayTodos';
 import { motion } from "framer-motion";
 
 
+
 function App() {
   return (
     <div className="App">

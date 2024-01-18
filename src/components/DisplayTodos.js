@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux';
-import { addTodos, removeTodos, updateTodos, completeTodos } from '../redux/reducer';
+import {
+  addTodos,
+  completeTodos,
+  removeTodos,
+  updateTodos,
+} from "../redux/reducer";
 import TodoItem from '../TodoItem';
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -24,14 +29,14 @@ const mapStateToProps = (state) => {
     return (
       <div className="displaytodos">
         <div className="buttons">
-          <motion.button
+          <motion.button style={{backgroundColor:'green'}}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setSort("active")}
           >
             Active
           </motion.button>
-          <motion.button
+          <motion.button style={{backgroundColor:'yellow'}}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setSort("completed")}

@@ -42,7 +42,8 @@ const TodoItem = (props) => {
         ref={inputRef}
         disabled={inputRef}
         defaultValue={item.item}
-        onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
+        onKeyPress={(e)=> update(item.id, inputRef.current.value, e)}
+
       />
       <div className="btns">
         <motion.button
@@ -51,6 +52,7 @@ const TodoItem = (props) => {
           onClick={() => changeFocus()}
         >
           {" "}
+          Edi
           <AiFillEdit />{" "}
         </motion.button>
         {item.completed === false && (
@@ -58,9 +60,11 @@ const TodoItem = (props) => {
             whileHover={{ scale: 1.4 }}
             whileTap={{ scale: 0.9 }}
             style={{ color: "green" }}
-            onClick={() => completeTodo(item.id)}
+          
+          onClick={() => completeTodo(item.id)}
+
           >
-            <IoCheckmarkDoneSharp />
+           comp <IoCheckmarkDoneSharp />
           </motion.button>
         )}
         <motion.button
@@ -70,6 +74,7 @@ const TodoItem = (props) => {
           onClick={() => removeTodo(item.id)}
         >
           {" "}
+          del
           <IoClose />
         </motion.button>{" "}
       </div>
